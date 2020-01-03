@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
     <table>
         <tr>
           <td [attr.colspan]="colSpan"></td>
-          <button class="btn btn-primary">Random button</button>
+          <button class="btn btn-primary" [class.active]="isActive">Random button</button>
         </tr>
     </table>
   `
@@ -22,8 +22,9 @@ import { Component } from "@angular/core";
 
 export class CoursesComponent {
   title = "List of courses";
-  source = "https://picsum.photos/id/237/200/300"
-  colSpan = "3"
+  source = "https://picsum.photos/id/237/200/300";
+  colSpan = "3";
+  isActive = true;
   courses;
 
   constructor(service: CoursesService) {
