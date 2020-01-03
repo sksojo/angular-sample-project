@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
     <table>
         <tr>
           <td [attr.colspan]="colSpan"></td>
-          <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'">Random button</button>
+          <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'" (click)="buttonClicked">Random button</button>
         </tr>
     </table>
   `
@@ -29,6 +29,10 @@ export class CoursesComponent {
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
+  }
+
+  buttonClicked($event) {
+    console.log("Button clicked" + $event)
   }
 
   getTitle() {
