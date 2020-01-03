@@ -14,7 +14,7 @@ import { Component } from "@angular/core";
     <table>
         <tr>
           <td [attr.colspan]="colSpan"></td>
-          <button class="btn btn-primary" [class.active]="isActive">Random button</button>
+          <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'">Random button</button>
         </tr>
     </table>
   `
