@@ -11,12 +11,18 @@ import { Component } from "@angular/core";
       </li>
     </ul>
     <img [src]="source"/>
+    <table>
+        <tr>
+          <td [attr.colspan]="colSpan"></td>
+        </tr>
+    </table>
   `
 })
 
 export class CoursesComponent {
   title = "List of courses";
   source = "https://picsum.photos/id/237/200/300"
+  colSpan = "3"
   courses;
 
   constructor(service: CoursesService) {
