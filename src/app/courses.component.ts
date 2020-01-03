@@ -10,11 +10,13 @@ import { Component } from "@angular/core";
         {{course}}
       </li>
     </ul>
+    <img [src]="source"/>
   `
 })
 
 export class CoursesComponent {
   title = "List of courses";
+  source = "https://picsum.photos/id/237/200/300"
   courses;
 
   constructor(service: CoursesService) {
