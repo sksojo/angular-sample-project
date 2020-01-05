@@ -17,7 +17,7 @@ import { Component } from "@angular/core";
           <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'" (click)="buttonClicked">Random button</button>
         </tr>
     </table>
-    <input (keyup.enter)="onKeyUp()" />
+    <input #email (keyup.enter)="onKeyUp(email.value)" />
   `
 })
 
@@ -36,8 +36,8 @@ export class CoursesComponent {
     console.log("Button clicked" + $event)
   }
 
-  onKeyUp() {
-    console.log("Enter button clicked");
+  onKeyUp(email) {
+    console.log(email);
   }
 
   getTitle() {
