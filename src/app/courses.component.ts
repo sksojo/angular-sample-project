@@ -17,13 +17,14 @@ import { Component } from "@angular/core";
           <button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'white'" (click)="buttonClicked">Random button</button>
         </tr>
     </table>
-    <input #email (keyup.enter)="onKeyUp(email.value)" />
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
   `
 })
 
 export class CoursesComponent {
   title = "List of courses";
   source = "https://picsum.photos/id/237/200/300";
+  email = "me@example.com";
   colSpan = "3";
   isActive = true;
   courses;
@@ -36,8 +37,8 @@ export class CoursesComponent {
     console.log("Button clicked" + $event)
   }
 
-  onKeyUp(email) {
-    console.log(email);
+  onKeyUp() {
+    console.log(this.email);
   }
 
   getTitle() {
