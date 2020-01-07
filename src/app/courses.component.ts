@@ -5,6 +5,7 @@ import { Component } from "@angular/core";
   selector: 'courses',
   template: `
     <h2>{{ getTitle() }}</h2>
+    {{text | summary: 10}}
     <ul>
       <li *ngFor="let course of courses">
         {{course}}
@@ -28,6 +29,7 @@ export class CoursesComponent {
   colSpan = "3";
   isActive = true;
   courses;
+  text = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
