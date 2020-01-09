@@ -7,34 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
-  public starGlyph: {
-    id: number,
-    name: string
-  };
-  public dataObj = [{
-    name: "star-half",
-    id: 0
-  },
-  {
-    name: "star",
-    id: 1
-  }
-]
+  public isFavorite: boolean;
+  public starIcon: string
 
   constructor() {
-
   }
 
   ngOnInit() {
-    this.starGlyph = this.dataObj[0];
+    this.starIcon = "star-half";
   }
 
   starClick(){
-    console.log(this.starGlyph);
-    let length = this.dataObj.length - 1;
-    if(length == this.starGlyph.id)
-      return this.starGlyph = this.dataObj[0];
-
-    this.starGlyph = this.dataObj[this.starGlyph.id + 1]
+    this.isFavorite = !this.isFavorite
+    return this.starIcon = this.isFavorite ?  "star" : "star-half"
   }
 }
