@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { StarComponent } from './star/star.component';
+import { TitlecaseComponent } from './titlecase/titlecase.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StarComponent } from './star/star.component';
     CourseComponent,
     AuthorsComponent,
     SummaryPipe,
-    StarComponent
+    StarComponent,
+    TitlecaseComponent
   ],
   imports: [
     BrowserModule,
