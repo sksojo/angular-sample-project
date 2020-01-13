@@ -14,6 +14,7 @@ import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { StarComponent } from './star/star.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
+import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TitlecaseComponent } from './titlecase/titlecase.component';
     AuthorsComponent,
     SummaryPipe,
     StarComponent,
-    TitlecaseComponent
+    TitlecaseComponent,
+    BootstrapPanelComponent
   ],
   imports: [
     BrowserModule,
