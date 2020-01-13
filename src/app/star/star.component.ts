@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StarComponent implements OnInit {
 
   @Input('isFavorite') isSelected: boolean;
+  @Output() change = new EventEmitter();
   public starIcon: string
 
   constructor() {
@@ -18,6 +19,7 @@ export class StarComponent implements OnInit {
   }
 
   starClick(){
+    this.change.emit();
     this.isSelected = !this.isSelected
     return this.starIcon = this.isSelected ?  "star" : "star-half"
   }

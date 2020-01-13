@@ -10,4 +10,8 @@ export class AppComponent {
   post = {
     isFavorite: true
   }
+
+  onChangeFavorite(){
+    console.log("Favorite component changed!");
+  }
 }
