@@ -3,7 +3,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-star',
   templateUrl: './star.component.html',
-  styleUrls: ['./star.component.sass']
+  styleUrls: ['./star.component.sass'],
+  styles: [
+    `
+      .fa{
+        background-color: blue;
+      }
+    `
+  ]
 })
 export class StarComponent implements OnInit {
 
