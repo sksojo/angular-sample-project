@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -10,7 +10,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
         background-color: blue;
       }
     `
-  ]
+  ],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class StarComponent implements OnInit {
 
