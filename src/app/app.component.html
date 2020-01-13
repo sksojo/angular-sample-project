@@ -5,8 +5,6 @@
 <app-authors></app-authors>
 <app-star [isFavorite]="post.isFavorite" (change)="onChangeFavorite($event)"></app-star>
 <bootstrap-panel>
-  <div class="heading">
-    <h1>This is the card heading</h1>
-  </div>
+  <ng-container class="heading">This is the card heading</ng-container>
   <div class="text">This is the card text</div>
 </bootstrap-panel>
