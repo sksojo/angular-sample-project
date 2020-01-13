@@ -19,8 +19,12 @@ export class StarComponent implements OnInit {
   }
 
   starClick(){
-    this.change.emit();
     this.isSelected = !this.isSelected
+    this.change.emit({newValue: this.isSelected});
     return this.starIcon = this.isSelected ?  "star" : "star-half"
   }
+}
+
+export interface favoriteChangeArgs{
+  newValue: boolean;
 }

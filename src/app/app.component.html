@@ -3,4 +3,4 @@
 <app-titlecase></app-titlecase>
 <courses></courses>
 <app-authors></app-authors>
-<app-star [isFavorite]="post.isFavorite" (change)="onChangeFavorite()"></app-star>
+<app-star [isFavorite]="post.isFavorite" (change)="onChangeFavorite($event)"></app-star>
