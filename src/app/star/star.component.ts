@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
-  public isFavorite: boolean;
+  @Input() isFavorite: boolean;
   public starIcon: string
 
   constructor() {
   }
 
   ngOnInit() {
-    this.starIcon = "star-half";
+    this.starIcon = this.isFavorite ?  "star" : "star-half"
   }
 
   starClick(){
