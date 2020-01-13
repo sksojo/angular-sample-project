@@ -7,18 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StarComponent implements OnInit {
 
-  @Input() isFavorite: boolean;
+  @Input('isFavorite') isSelected: boolean;
   public starIcon: string
 
   constructor() {
   }
 
   ngOnInit() {
-    this.starIcon = this.isFavorite ?  "star" : "star-half"
+    this.starIcon = this.isSelected ?  "star" : "star-half"
   }
 
   starClick(){
-    this.isFavorite = !this.isFavorite
-    return this.starIcon = this.isFavorite ?  "star" : "star-half"
+    this.isSelected = !this.isSelected
+    return this.starIcon = this.isSelected ?  "star" : "star-half"
   }
 }
