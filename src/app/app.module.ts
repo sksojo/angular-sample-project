@@ -15,6 +15,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { StarComponent } from './star/star.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { DerivatiesComponent } from './derivaties/derivaties.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
     SummaryPipe,
     StarComponent,
     TitlecaseComponent,
-    BootstrapPanelComponent
+    BootstrapPanelComponent,
+    DerivatiesComponent
   ],
   imports: [
     BrowserModule,
