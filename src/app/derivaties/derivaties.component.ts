@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DerivatiesComponent implements OnInit {
 
   public courses = [];
-
+  public viewMode = 'map'
   constructor() { }
 
   ngOnInit() {
