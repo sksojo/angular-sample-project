@@ -5,6 +5,7 @@ import { Component } from "@angular/core";
   selector: 'courses',
   template: `
     <h2>{{ getTitle() }}</h2>
+    <button (click)='addCourse()'>Add course</button>
     {{text | summary: 10}}
     <ul>
       <li *ngFor="let course of courses">
@@ -45,5 +46,9 @@ export class CoursesComponent {
 
   getTitle() {
     return this.title;
+  }
+
+  addCourse(){
+    this.courses.push({id:4, name: 'course5'});
   }
 }
