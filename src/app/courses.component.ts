@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
     {{text | summary: 10}}
     <ul>
       <li *ngFor="let course of courses; trackBy: trackCourse">
-        {{course.name}}
+        {{course?.name}}
       </li>
     </ul>
     <img [src]="source"/>
