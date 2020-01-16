@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
     {{text | summary: 10}}
     <ul>
       <li *ngFor="let course of courses">
-        {{course}}
+        {{course.name}}
       </li>
     </ul>
     <img [src]="source"/>

@@ -9,11 +9,15 @@
   <div *ngSwitchCase="'list'">List view content</div>
   <div *ngSwitchDefault>Otherwise</div>
 </div>
-
-
+<br>
 <div *ngIf="courses.length > 0" then coursesList else noCourses></div>
 <ng-template #coursesList>
   <h2>List of courses</h2>
+  <ul *ngFor="let course of courses">
+    <li>
+      {{course.name}}
+    </li>
+  </ul>
 </ng-template>
 <ng-template #noCourses>
   <h2>No courses yet!</h2>

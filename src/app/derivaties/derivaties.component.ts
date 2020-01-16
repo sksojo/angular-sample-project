@@ -1,5 +1,12 @@
+import { CoursesService } from './../courses.service';
 import { Component, OnInit } from '@angular/core';
-
+/**
+ *
+ *
+ * @export
+ * @class DerivatiesComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-derivaties',
   templateUrl: './derivaties.component.html',
@@ -7,11 +14,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DerivatiesComponent implements OnInit {
 
-  public courses = [];
+  public courses = []
   public viewMode = 'map'
-  constructor() { }
+
+  constructor(CoursesService: CoursesService) {
+    this.courses = CoursesService.getCourses();
+   }
 
   ngOnInit() {
-    this.courses = ["course1", "course2"]
   }
 }
