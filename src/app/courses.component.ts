@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
     <button (click)='addCourse()'>Add course</button>
     {{text | summary: 10}}
     <ul>
-      <li *ngFor="let course of courses">
+      <li *ngFor="let course of courses; trackBy: trackCourse">
         {{course.name}}
       </li>
     </ul>
@@ -50,5 +50,9 @@ export class CoursesComponent {
 
   addCourse(){
     this.courses.push({id:4, name: 'course5'});
+  }
+
+  trackCourse(index, course){
+    return course ? course.id : undefined;
   }
 }
