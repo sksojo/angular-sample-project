@@ -1,5 +1,8 @@
 <p>posts works!</p>
 
+<input type="title" #title (keyup.enter)="postTitle(title)"
+  class="form-control">
+
 <ul class="list-group" *ngFor="let post of posts">
   <li class="list-item">
     {{post.title}}
