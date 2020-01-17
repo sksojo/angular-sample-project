@@ -7,6 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { StarComponent } from './star/star.component';
 import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { DerivatiesComponent } from './derivaties/derivaties.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,15 @@ import { DerivatiesComponent } from './derivaties/derivaties.component';
     StarComponent,
     TitlecaseComponent,
     BootstrapPanelComponent,
-    DerivatiesComponent
+    DerivatiesComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [
     CoursesService,
