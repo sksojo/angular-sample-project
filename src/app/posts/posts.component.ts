@@ -21,7 +21,7 @@ export class PostsComponent implements OnInit {
      this.post = {title: input.value}
      this.http.post(this.url, JSON.stringify(this.post))
       .subscribe(response => {
-        this.post.id = response.id;
+        // this.post.id = response.id;
         this.posts.splice(0,0,this.post)
       })
    }

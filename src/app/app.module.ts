@@ -19,6 +19,7 @@ import { TitlecaseComponent } from './titlecase/titlecase.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { DerivatiesComponent } from './derivaties/derivaties.component';
 import { PostsComponent } from './posts/posts.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PostsComponent } from './posts/posts.component';
     TitlecaseComponent,
     BootstrapPanelComponent,
     DerivatiesComponent,
-    PostsComponent
+    PostsComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
